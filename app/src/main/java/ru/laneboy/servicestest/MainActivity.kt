@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private fun clickOnBtnService() {
 
         binding.btnSimpleService.setOnClickListener {
-            startService(MyService.newIntent(this))
+            startService(MyService.newIntent(this, 25))
         }
     }
 }
