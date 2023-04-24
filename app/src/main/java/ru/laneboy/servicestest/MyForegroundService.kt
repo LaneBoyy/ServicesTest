@@ -1,6 +1,5 @@
 package ru.laneboy.servicestest
 
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
@@ -26,7 +25,7 @@ class MyForegroundService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         log("onStartCommand")
         coroutineScope.launch {
-            for (i in 0 until 100) {
+            for (i in 0 until 3) {
                 delay(1000)
                 log("Timer $i")
             }
